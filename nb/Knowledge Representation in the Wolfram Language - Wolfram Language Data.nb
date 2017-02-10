@@ -1,0 +1,4338 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    186776,       4330]
+NotebookOptionsPosition[    184565,       4252]
+NotebookOutlinePosition[    185092,       4273]
+CellTagsIndexPosition[    185049,       4270]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Knowledge Representation in the Wolfram Language", "Title",
+ CellChangeTimes->{{3.68766327950068*^9, 3.6876633153124104`*^9}}],
+
+Cell[TextData[{
+ "See \[OpenCurlyDoubleQuote]",
+ Cell[BoxData[
+  FormBox[
+   ButtonBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"Knowledge", " ", "Representation"}], " ", "&"}], " ", 
+     "Access"}],
+    BaseStyle->"Hyperlink",
+    ButtonData->{
+      URL[
+      "http://reference.wolfram.com/language/guide/\
+KnowledgeRepresentationAndAccess.html"], None},
+    ButtonNote->
+     "http://reference.wolfram.com/language/guide/\
+KnowledgeRepresentationAndAccess.html"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[CloseCurlyDoubleQuote] in the Wolfram Language Guide"
+}], "Text",
+ CellChangeTimes->{{3.6876633598281307`*^9, 3.687663444082626*^9}, {
+  3.6876636974292192`*^9, 3.6876637801207185`*^9}, {3.6876639098844852`*^9, 
+  3.6876639098874865`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Wolfram Language Data", "Section",
+ CellChangeTimes->{{3.687663792069836*^9, 3.6876637978198643`*^9}}],
+
+Cell["\<\
+The Wolfram Language itself is knowledge represented in the Wolfram Language:\
+\>", "Text",
+ CellChangeTimes->{{3.6876633598281307`*^9, 3.687663444082626*^9}, {
+  3.6876636974292192`*^9, 3.687663755486736*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframLanguageData", "[", "\"\<Classes\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6876635665984592`*^9, 3.6876635891990843`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{
+    "\"Wolfram Language experimental symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Experimental\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Experimental\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language atomic functions\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Atomic\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Atomic\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language autoevaluating symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Autoevaluating\""}], 
+       "]"}],"\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Autoevaluating\
+\\\"]\"","\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language curryable symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Curryable\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Curryable\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{"\"all Wolfram Language symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "All"}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", All]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"]}], "}"}]], "Output",
+ CellChangeTimes->{3.687663593895282*^9, 3.6876676668903236`*^9, 
+  3.687667730140665*^9, 3.687668754918936*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Our ",
+ ButtonBox["WolframLanguageData",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/WolframLanguageData.html"],
+     None},
+  ButtonNote->
+   "http://reference.wolfram.com/language/ref/WolframLanguageData.html"],
+ " input appears to be identical to this ",
+ ButtonBox["EntityClassList",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/EntityClassList.html"], 
+    None},
+  ButtonNote->
+   "http://reference.wolfram.com/language/ref/EntityClassList.html"],
+ " input:"
+}], "Text",
+ CellChangeTimes->{{3.687664766897688*^9, 3.687664789593816*^9}, {
+  3.687664880259533*^9, 3.6876649197287035`*^9}, {3.687664950198172*^9, 
+  3.687664950199172*^9}, {3.6876650150326786`*^9, 3.687665015033679*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityClassList", "[", "\"\<WolframLanguageSymbol\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6876646636216307`*^9, 3.6876647095756245`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{
+    "\"Wolfram Language experimental symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Experimental\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Experimental\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language atomic functions\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Atomic\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Atomic\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language autoevaluating symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Autoevaluating\""}], 
+       "]"}],"\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Autoevaluating\
+\\\"]\"","\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{
+    "\"Wolfram Language curryable symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Curryable\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Curryable\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], ",", 
+   TemplateBox[{"\"all Wolfram Language symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "All"}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", All]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"]}], "}"}]], "Output",
+ CellChangeTimes->{3.6876646776436157`*^9, 3.687664713587347*^9, 
+  3.687667667010413*^9, 3.6876677302618327`*^9, 3.6876687550453086`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The output are instances of ",
+ ButtonBox["EntityClass",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/EntityClass.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/EntityClass.html"],
+ ". Let\[CloseCurlyQuote]s see a ",
+ ButtonBox["Shallow",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/Shallow.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/Shallow.html"],
+ " list of Wolfram Language experimental symbols:"
+}], "Text",
+ CellChangeTimes->{{3.687663858127822*^9, 3.687663873519775*^9}, {
+  3.6876639293556185`*^9, 3.687663952123928*^9}, {3.6876639877580657`*^9, 
+  3.687663987759068*^9}, {3.687664205063697*^9, 3.6876642801481996`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EntityList", "[", 
+   TemplateBox[{
+    "\"Wolfram Language experimental symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Experimental\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Experimental\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], "]"}], "//", "Shallow"}]], "Input",
+ CellChangeTimes->{{3.6876643182873096`*^9, 3.6876643664400487`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AnatomyPlot3D\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyPlot3D\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyPlot3D\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Ask\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Ask\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"Ask\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskAppend\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskAppend\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskAppend\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskConfirm\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskConfirm\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskConfirm\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskDisplay\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskDisplay\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskDisplay\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskedQ\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskedQ\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskedQ\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskedValue\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskedValue\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskedValue\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskFunction\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskFunction\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AskFunction\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AskTemplateDisplay\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AskTemplateDisplay\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"AskTemplateDisplay\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   RowBox[{"\[LeftSkeleton]", "111", "\[RightSkeleton]"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6876643715198507`*^9, 3.687667667081965*^9, 
+  3.6876677303358846`*^9, 3.687668755116368*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use ",
+ ButtonBox["Dataset",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/Dataset.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/Dataset.html"],
+ " to scroll/browse through all of the symbols:"
+}], "Text",
+ CellChangeTimes->{{3.68766736374462*^9, 3.6876674150528097`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dataset", "[", 
+  RowBox[{"EntityList", "[", 
+   TemplateBox[{
+    "\"Wolfram Language experimental symbols\"",RowBox[{"EntityClass", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Experimental\""}], "]"}],
+     "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Experimental\\\"]\"",
+     "\"Wolfram Language symbols\""},
+    "EntityClass"], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6876674358102975`*^9, 3.687667439238806*^9}, {
+   3.687667597957962*^9, 3.687667606389798*^9}, 3.687667721429237*^9}],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 121, "Length" -> 121, "InitialType" -> TypeSystem`Vector[
+          TypeSystem`Atom[
+           Entity["WolframLanguageSymbol"]], 121], "Shape" -> 
+        TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`MulticolumnShape[11, 11, 90], 121, {}], 
+        "InitialData" -> TypeSystem`PackageScope`CacheHandle[222414006], 
+        "Type" -> TypeSystem`Vector[
+          TypeSystem`Atom[
+           Entity["WolframLanguageSymbol"]], 121], "HandleQ" -> True, 
+        "RowTarget" -> 20, "Data" -> 
+        TypeSystem`PackageScope`CacheHandle[222414006]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AnatomyForm\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[1]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AnatomyPlot3D\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[2]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"Ask\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[3]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskAppend\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[4]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskConfirm\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[5]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskDisplay\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[6]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskedQ\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[7]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskedValue\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[8]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[9]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AskTemplateDisplay\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[10]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"AssumeDeterministic\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[11]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"Autocomplete\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[12]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"AutocompletionFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[13]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"BatchNormalizationLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[14]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"BatchSize\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[15]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"BayesianMaximization\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[16]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"BayesianMaximizationObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[17]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"BayesianMinimization\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[18]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"BayesianMinimizationObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[19]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"CatenateLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[20]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelBase\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[21]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelDatabin\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[22]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelListen\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[23]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelListener\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[24]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelListeners\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[25]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[26]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"ChannelPreSendFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[27]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelSend\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[28]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ChannelSubscribers\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[29]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"CloudExpression\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[30]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"CloudExpressions\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[31]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"Containing\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[32]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ContentFieldOptions\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[33]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"ContentLocationFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[34]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ContentObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[35]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ConvolutionLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[36]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"CreateChannel\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[37]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"CreateCloudExpression\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[38]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"CreateSearchIndex\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[39]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"CrossEntropyLossLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[40]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DeconvolutionLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[41]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DeleteChannel\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[42]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"DeleteCloudExpression\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[43]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DeleteSearchIndex\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[44]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DimensionReduce\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[45]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"DimensionReducerFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[46]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DimensionReduction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[47]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DisableFormatting\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[48]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DotPlusLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[49]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DropoutLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[50]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DynamicGeoGraphics\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[51]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"DynamicImage\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[52]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ElementwiseLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[53]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"EmbeddingLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[54]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"EntityStore\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[55]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FeatureDistance\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[56]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FeatureExtract\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[57]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FeatureExtraction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[58]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FeatureExtractor\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[59]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"FeatureExtractorFunction\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[60]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FileNameForms\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[61]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FileSystemMap\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[62]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FileSystemScan\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[63]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FindChannels\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[64]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FlattenLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[65]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FoldPair\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[66]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FoldPairList\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[67]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"FormControl\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[68]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"GalleryView\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[69]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"HandlerFunctions\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[70]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"HandlerFunctionsKeys\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[71]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"InitialEvaluationHistory\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[72]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"MaxTrainingRounds\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[73]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"MaxWordGap\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[74]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"MeanAbsoluteLossLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[75]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"MeanSquaredLossLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[76]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetChain\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[77]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetDecoder\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[78]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetEncoder\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[79]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetExtract\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[80]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetGraph\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[81]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetInitialize\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[82]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetPort\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[83]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"NetTrain\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[84]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"Pagination\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[85]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"PartProtection\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[86]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"PoolingLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[87]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"RemoveChannelListener\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[88]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ReshapeLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[89]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ResourceData\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[90]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ResourceObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[91]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ResourceRemove\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[92]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ResourceSearch\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[93]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SearchAdjustment\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[94]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SearchIndexObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[95]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SearchIndices\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[96]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SearchQueryString\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[97]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SearchResultObject\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[98]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SkinStyle\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[99]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"Snippet\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[100]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SoftmaxLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[101]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SourceLink\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[102]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"SummationLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[103]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TargetDevice\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[104]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextCases\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[105]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextElement\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[106]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextPosition\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[107]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextSearch\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[108]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextSearchReport\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[109]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TextStructure\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[110]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"TotalLayer\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[111]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"UpdateSearchIndex\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[112]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"URLSubmit\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[113]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"WordTranslation\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[114]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ZoomCenter\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[115]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"ZoomFactor\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[116]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox[
+                   "\"$AllowExternalChannelFunctions\"", FontColor -> 
+                    RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[117]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"$ChannelBase\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[118]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"$CookieStore\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[119]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"$EntityStores\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[120]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}], 
+               Item[
+                Pane[
+                 Annotation[
+                  RawBoxes[
+                   StyleBox["\"$SourceLink\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                  2034968764][
+                   GeneralUtilities`Slice[121]], "Mouse"], 
+                 ImageSize -> {{90, Full}, Automatic}, 
+                 Alignment -> {Left, Baseline}], Frame -> {{
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]], 
+                   Directive[
+                    Dashing[{0, Small}], 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]]}, Inherited}]}}, 
+             BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2034968764][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        Initialization :> If[
+          Not[$CloudEvaluation], 
+          TypeSystem`NestedGrid`PackagePrivate`attachScrollbar[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$]], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+         TypeSystem`PackageScope`Pathbar[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+          TypeSystem`NestedGrid`PackagePrivate`updateState[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 2034968764]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2034968764][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[2034968764][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$]], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]], DynamicModuleValues :> {}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$]], Deploy, 
+    DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ CellChangeTimes->{3.6876674409709983`*^9, 3.6876676674719453`*^9, 
+  3.6876677307189703`*^9, 3.687668755286498*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use ",
+ ButtonBox["Select",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/Select.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/Select.html"],
+ " to target a subset:"
+}], "Text",
+ CellChangeTimes->{{3.687671178126522*^9, 3.6876711807372346`*^9}, {
+  3.687671219748993*^9, 3.687671259182602*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"EntityList", "[", 
+    TemplateBox[{
+     "\"Wolfram Language experimental symbols\"",RowBox[{"EntityClass", "[", 
+        RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Experimental\""}], "]"}],
+      "\"EntityClass[\\\"WolframLanguageSymbol\\\", \\\"Experimental\\\"]\"",
+      "\"Wolfram Language symbols\""},
+     "EntityClass"], "]"}], ",", 
+   RowBox[{
+    RowBox[{"StringMatchQ", "[", 
+     RowBox[{
+      RowBox[{"EntityValue", "[", 
+       RowBox[{"#", ",", 
+        TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+            RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Name\""}], "]"}],
+          "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Name\\\"]\""},
+         "EntityProperty"]}], "]"}], ",", "\"\<Feature*\>\""}], "]"}], 
+    "&"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.687671262842363*^9, 3.6876712914461975`*^9}, {
+   3.6876713349807477`*^9, 3.6876713896094713`*^9}, {3.687671487998646*^9, 
+   3.6876714929185967`*^9}, {3.6876715555399675`*^9, 3.68767156702969*^9}, {
+   3.6876716774479895`*^9, 3.6876716799605494`*^9}, {3.6876717106867003`*^9, 
+   3.687671725905773*^9}, {3.687672007044252*^9, 3.6876720098516808`*^9}, {
+   3.6876722060357494`*^9, 3.687672277227767*^9}, {3.6876723107777348`*^9, 
+   3.687672324120356*^9}, {3.68767237136059*^9, 3.687672387298038*^9}, 
+   3.687672552384862*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"FeatureDistance\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FeatureDistance\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"FeatureDistance\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"FeatureExtract\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FeatureExtract\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \\\"FeatureExtract\\\"]\
+\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"FeatureExtraction\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FeatureExtraction\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \\\"FeatureExtraction\\\
+\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"FeatureExtractor\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FeatureExtractor\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"FeatureExtractor\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"FeatureExtractorFunction\"",RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"FeatureExtractorFunction\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"FeatureExtractorFunction\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.6876713930740395`*^9, 3.687671494469231*^9, 
+  3.687671557717792*^9, 3.6876716852538905`*^9, 3.687671727088287*^9, 
+  3.687672011014944*^9, 3.6876723895104446`*^9, 3.6876726201469545`*^9, 
+  3.6876728420480013`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityProperties", "[", 
+  TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+    "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+    "\"Wolfram Language symbol\""},
+   "Entity"], "]"}]], "Input",
+ CellChangeTimes->{{3.6876652419187613`*^9, 3.687665250661853*^9}, {
+  3.6876673057993584`*^9, 3.6876673123547153`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"attributes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Attributes\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Attributes\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"common option values\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"CommonOptionValues\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"CommonOptionValues\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"date introduced\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"DateIntroduced\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DateIntroduced\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"date last modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"DateLastModified\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DateLastModified\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"dates modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"DatesModified\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DatesModified\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"documentation basic examples\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"DocumentationBasicExamples\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DocumentationBasicExamples\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"documentation example counts\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"DocumentationExampleCounts\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DocumentationExampleCounts\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"documentation example inputs\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"DocumentationExampleInputs\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DocumentationExampleInputs\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"documentation example text\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"DocumentationExampleText\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"DocumentationExampleText\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"eponymous people\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"EponymousPeople\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"EponymousPeople\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"equal\[Hyphen]precedence symbols\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"EqualPrecedenceSymbols\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"EqualPrecedenceSymbols\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"external links\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"ExternalLinks\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"ExternalLinks\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"frequencies of usage\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Frequencies\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Frequencies\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"full version introduced\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"FullVersionIntroduced\""}], 
+       "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"FullVersionIntroduced\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"full version last modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"FullVersionLastModified\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"FullVersionLastModified\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"full versions modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FullVersionsModified\""}],
+        "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"FullVersionsModified\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"functionality areas\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FunctionalityAreas\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"FunctionalityAreas\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"symbol background\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"FunctionEssay\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"FunctionEssay\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"keyboard shortcuts\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"KeyboardShortcuts\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"KeyboardShortcuts\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"link trails\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"LinkTrails\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"LinkTrails\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"memberships\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Memberships\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Memberships\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Name\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Name\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"option names\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"OptionNames\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"OptionNames\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"options\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Options\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Options\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"plaintext usage\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"PlaintextUsage\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"PlaintextUsage\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"precedence ranks\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"PrecedenceRanks\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"PrecedenceRanks\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"ranks of usage\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Ranks\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Ranks\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"related entities\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"RelatedEntities\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelatedEntities\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"related symbols\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"RelatedSymbols\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelatedSymbols\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"relationship community graph\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"RelationshipCommunityGraph\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelationshipCommunityGraph\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"relationship graph\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"RelationshipGraph\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelationshipGraph\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"short notations\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"ShortNotations\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"ShortNotations\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"subject classifications\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"WolframLanguageSymbol\"", ",", "\"SubjectClassifications\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"SubjectClassifications\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"text strings\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"TextStrings\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"TextStrings\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"timeline\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Timeline\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"Timeline\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"translations\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"Translations\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"Translations\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"typeset usage\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"TypesetUsage\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"TypesetUsage\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"URL\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"URL\""}], "]"}],
+     "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \\\"URL\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"version introduced\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"VersionIntroduced\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"VersionIntroduced\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"version last modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"VersionLastModified\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"VersionLastModified\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"versions modified\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"VersionsModified\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"VersionsModified\\\"]\""},
+    "EntityProperty"]}], "}"}]], "Output",
+ CellChangeTimes->{3.687665252888883*^9, 3.687667668084261*^9, 
+  3.687667731280656*^9, 3.687668756151117*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "We see from the ",
+ ButtonBox["EntityProperties",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/EntityProperties.html"], 
+    None},
+  ButtonNote->
+   "http://reference.wolfram.com/language/ref/EntityProperties.html"],
+ " of the AnatomyForm Entity date-related properties that suggest that a ",
+ ButtonBox["TimelinePlot",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/TimelinePlot.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/TimelinePlot.html"],
+ " can be generated:"
+}], "Text",
+ CellChangeTimes->{{3.687665452546973*^9, 3.687665548890215*^9}, {
+  3.6876658297869167`*^9, 3.6876658613157845`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframLanguageData", "[", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", "\"\<Timeline\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.6876655845842705`*^9, 3.687665601036122*^9}, {
+  3.687665743594616*^9, 3.687665760868284*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {AbsolutePointSize[0], Opacity[0], 
+    PointBox[NCache[{{2.7769824*^9, 1}, {
+       3.687644162*^9, Rational[107, 20]}}, {{2.7769824*^9, 1}, {
+       3.687644162*^9, 5.35}}]], 
+    PointBox[NCache[{{2.7769824*^9, Rational[-1, 2]}, {3.687644162*^9, 0}}, {{
+       2.7769824*^9, -0.5}, {3.687644162*^9, 0}}]]}, {}, {
+    {PointSize[0], Opacity[0], 
+     PointBox[NCache[{{3.54755724451*^9, 1}, {
+        3.81164915549*^9, Rational[97, 20]}}, {{3.54755724451*^9, 1}, {
+        3.81164915549*^9, 4.85}}]]}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], AbsolutePointSize[7], 
+     AbsoluteThickness[1.6], Opacity[1], 
+     TagBox[
+      TooltipBox[
+       DynamicBox[{
+         FEPrivate`If[
+          CurrentValue["MouseOver"], 
+          Directive[
+           EdgeForm[
+            Directive[
+             RGBColor[0.368417, 0.506779, 0.709798], 
+             Thickness[Large], 
+             Opacity[0.2]]], 
+           FaceForm[{
+             RGBColor[
+             0.24561133333333335`, 0.3378526666666667, 0.4731986666666667], 
+             Opacity[1]}], 
+           CapForm["Round"], 
+           AbsoluteThickness[2.5], 
+           AbsolutePointSize[10], 
+           FrameBoxOptions -> {BoxFrame -> 2.5}], {}, {}], {{{
+            Directive[
+             Opacity[0.2]], {
+             CapForm["Round"], 
+             LineBox[{{3679603200, 1}, {3679603200, 1}}]}}, {{}, {{{{}, {{{
+                  AbsolutePointSize[10], 
+                  GrayLevel[1], 
+                  PointBox[{3679603200, 1}]}, 
+                 PointBox[{3679603200, 1}]}}, {}, {}}, {}}, {{}}}}}, {{
+            CapForm["Butt"], 
+            LineBox[{{3679603200, 3}, 
+              Offset[{0, 0}, {3679603200, 1}]}], 
+            PolygonBox[
+             NCache[{
+               Offset[{0, 
+                 Rational[-16, 3]}, {3679603200, 3}], 
+               Offset[{
+                 Rational[16, 3], 1.5}, {3679603200, 3}], 
+               Offset[{
+                 Rational[-16, 3], 1.5}, {3679603200, 3}]}, {
+               Offset[{0, -5.333333333333333}, {3679603200, 3}], 
+               Offset[{5.333333333333333, 1.5}, {3679603200, 3}], 
+               Offset[{-5.333333333333333, 1.5}, {3679603200, 3}]}]], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               FrameBox[
+                StyleBox[
+                 TemplateBox[{
+                   StyleBox["\"(introduced)\"", 
+                    GrayLevel[0.5], StripOnInput -> False], "\" \"", 
+                   "\"AnatomyForm\""}, "RowDefault"], {
+                  GrayLevel[0.3]}, StripOnInput -> False], RoundingRadius -> 
+                5, FrameMargins -> 5, Background -> GrayLevel[1], 
+                StripOnInput -> False], TraditionalForm]], 
+             Offset[{0, 0}, {3679603200, 3}], {Center, Bottom}, {
+             Automatic, Automatic}]}, {
+            EdgeForm[], 
+            FaceForm[], 
+            RectangleBox[{3.54755724451*^9, 3}, 
+             NCache[{3.81164915549*^9, 
+               Rational[87, 20]}, {3.81164915549*^9, 4.35}]]}}}},
+        ImageSizeCache->{{715.405223288818, 
+         959.4472232888174}, {-68.98345015576325, 36.5}}],
+       StyleBox[
+        TagBox[
+         GridBox[{{
+            TemplateBox[{
+              RowBox[{"\"08/08/2016\""}], 
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    RowBox[{"2016", ",", "8", ",", "8"}], "}"}], ",", 
+                  RowBox[{"DateFormat", "\[Rule]", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Month\"", ",", "\"/\"", ",", "\"Day\"", ",", "\"/\"", 
+                    ",", "\"Year\""}], "}"}]}]}], "]"}]}, "DateObject", 
+             Editable -> False]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Right}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"], {},
+         StripOnInput -> False]],
+      Annotation[#, 
+       Style[
+        Grid[{{
+           
+           DateObject[{2016, 8, 8}, 
+            DateFormat -> {"Month", "/", "Day", "/", "Year"}]}}, Alignment -> 
+         Right], {}], "Tooltip"]& ]}, {{{}, InsetBox[
+       StyleBox["\<\"V11\"\>",
+        StripOnInput->False,
+        LineColor->GrayLevel[0],
+        FrontFaceColor->GrayLevel[0],
+        BackFaceColor->GrayLevel[0],
+        GraphicsColor->GrayLevel[0],
+        FontColor->GrayLevel[0]], Offset[{6, 0}, {3679603200, 1}], 
+       ImageScaled[{0, 0.5}]]}, {}}}, {}, {}},
+  AspectRatio->NCache[
+    Rational[923, 6000], 0.15383333333333332`],
+  Axes->{False, False},
+  AxesOrigin->{0, 0},
+  Frame->{{None, None}, {True, None}},
+  FrameTicks->
+   FrontEndValueCache[{{None, None}, {
+     Charting`getDateTicks[Automatic, {Automatic}, 
+       (Map[DateList, {
+         SlotSequence[1]}]& )[
+        SlotSequence[1]], None, 7, {{0.01, 0}, {0.005, 0}}, Automatic]& , 
+      Automatic}}, {{None, None}, {{{2.6823744*^9, 
+        FormBox["\"1985\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.8401408*^9, 
+        FormBox["\"1990\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.9979072*^9, 
+        FormBox["\"1995\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.1556736*^9, 
+        FormBox["\"2000\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.3135264*^9, 
+        FormBox["\"2005\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.4712928*^9, 
+        FormBox["\"2010\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.6290592*^9, 
+        FormBox["\"2015\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.7868256*^9, 
+        FormBox["\"2020\"", TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.7139104*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.7454464*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.7769824*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.8086048*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.8716768*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.9032128*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.9348352*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       2.9663712*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.0294432*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.0610656*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.0926016*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.1241376*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.187296*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.218832*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.250368*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.281904*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.3450624*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.3765984*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.4081344*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.4397568*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.5028288*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.5343648*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.5659872*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.5975232*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.6605952*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.6922176*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}, {
+       3.7237536*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.006666666666666666, 0.}}}, 
+      Automatic}}],
+  GridLines->{None, None},
+  ImagePadding->All,
+  ImageSize->{600, Automatic},
+  PlotRange->{{2.7769824*^9, 3.687644162*^9}, {0, All}},
+  PlotRangePadding->{{
+     Scaled[0.06], 
+     Scaled[0.06]}, {None, 
+     Scaled[0.05]}},
+  Ticks->{{{2.5245216*^9, 
+      FormBox["\"1980\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     2.8401408*^9, 
+      FormBox["\"1990\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     3.1556736*^9, 
+      FormBox["\"2000\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     3.4712928*^9, 
+      FormBox["\"2010\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     3.7868256*^9, 
+      FormBox["\"2020\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     4.1024448*^9, 
+      FormBox["\"2030\"", TraditionalForm], {0.006666666666666666, 0}}, {
+     2.58768*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     2.650752*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     2.7139104*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     2.7769824*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     2.9032128*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     2.9663712*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.0294432*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.0926016*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.218832*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.281904*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.3450624*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.4081344*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.5343648*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.5975232*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.6605952*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.7237536*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}, {
+     3.849984*^9, 
+      FormBox[
+       InterpretationBox[
+        StyleBox[
+         GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+         "CacheGraphics" -> False], 
+        Spacer[{0, 0}]], TraditionalForm], {0.006666666666666666, 0}}}, 
+    None}]], "Output",
+ CellChangeTimes->{3.6876656039642773`*^9, 3.6876657627799892`*^9, 
+  3.687667668177823*^9, 3.6876677313917475`*^9, 3.6876687562767153`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ ButtonBox["EntityValue",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/EntityValue.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/EntityValue.html"],
+ " from an ",
+ ButtonBox["EntityProperty",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/EntityProperty.html"], 
+    None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/EntityProperty.html"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.687669307617798*^9, 3.6876693244416003`*^9}, {
+  3.6876693582462025`*^9, 3.6876694204337525`*^9}, {3.6876694552313585`*^9, 
+  3.68766945523236*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"plaintext usage\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"PlaintextUsage\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"PlaintextUsage\\\"]\""},
+    "EntityProperty"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6876662150626006`*^9, 3.6876662771790457`*^9}}],
+
+Cell[BoxData["\<\"AnatomyForm[g] is a graphics directive used in \
+AnatomyPlot3D that specifies how anatomy entity-based graphics objects are to \
+be drawn using the graphics directive or association of directives g.\"\>"], \
+"Output",
+ CellChangeTimes->{3.687666278538165*^9, 3.6876676682328653`*^9, 
+  3.687667731443783*^9, 3.687668756333256*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"related symbols\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"RelatedSymbols\""}], 
+       "]"}],"\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelatedSymbols\\\"]\""},
+    "EntityProperty"]}], "]"}]], "Input",
+ CellChangeTimes->{3.6876671965090117`*^9, 3.687667228704951*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyPlot3D\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyPlot3D\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyPlot3D\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AnatomyData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyData\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyData\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"HumanGrowthData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"HumanGrowthData\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"HumanGrowthData\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"EntityValue\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"EntityValue\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"EntityValue\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6876672058934193`*^9, 3.687667230904482*^9}, 
+   3.6876676682658873`*^9, 3.6876677314748077`*^9, 3.687668756380297*^9}]
+}, Open  ]],
+
+Cell["\<\
+We see that EntityValue is an explicit form of this equivalent expression:\
+\>", "Text",
+ CellChangeTimes->{{3.687670473699363*^9, 3.6876705135826283`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"\"AnatomyForm\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyForm\""}], "]"}],
+    "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyForm\\\"]\"",
+    "\"Wolfram Language symbol\""},
+   "Entity"], "[", 
+  TemplateBox[{"\"related symbols\"",RowBox[{"EntityProperty", "[", 
+      RowBox[{"\"WolframLanguageSymbol\"", ",", "\"RelatedSymbols\""}], "]"}],
+    "\"EntityProperty[\\\"WolframLanguageSymbol\\\", \
+\\\"RelatedSymbols\\\"]\""},
+   "EntityProperty"], "]"}]], "Input",
+ CellChangeTimes->{{3.6876703378768897`*^9, 3.687670345853423*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyPlot3D\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyPlot3D\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyPlot3D\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AnatomyData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyData\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyData\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"HumanGrowthData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"HumanGrowthData\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"HumanGrowthData\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"EntityValue\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"EntityValue\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"EntityValue\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.687670352913645*^9}]
+}, Open  ]],
+
+Cell["Or the Input Text form:", "Text",
+ CellChangeTimes->{{3.687670612720803*^9, 3.687670620543091*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Entity", "[", 
+   RowBox[{"\"\<WolframLanguageSymbol\>\"", ",", "\"\<AnatomyForm\>\""}], 
+   "]"}], "[", "\"\<RelatedSymbols\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6876707565057616`*^9, 3.6876707565332813`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"AnatomyPlot3D\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyPlot3D\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyPlot3D\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"AnatomyData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"AnatomyData\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"AnatomyData\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"HumanGrowthData\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"HumanGrowthData\""}], 
+       "]"}],"\"Entity[\\\"WolframLanguageSymbol\\\", \
+\\\"HumanGrowthData\\\"]\"","\"Wolfram Language symbol\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"EntityValue\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"WolframLanguageSymbol\"", ",", "\"EntityValue\""}], "]"}],
+     "\"Entity[\\\"WolframLanguageSymbol\\\", \\\"EntityValue\\\"]\"",
+     "\"Wolfram Language symbol\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.687670759763256*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1260, 898},
+WindowMargins->{{114, Automatic}, {21, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 132, 1, 214, "Title"],
+Cell[715, 25, 766, 22, 45, "Text"],
+Cell[CellGroupData[{
+Cell[1506, 51, 108, 1, 93, "Section"],
+Cell[1617, 54, 220, 4, 45, "Text"],
+Cell[CellGroupData[{
+Cell[1862, 62, 156, 2, 45, "Input"],
+Cell[2021, 66, 1666, 33, 157, "Output"]
+}, Open  ]],
+Cell[3702, 102, 805, 21, 45, "Text"],
+Cell[CellGroupData[{
+Cell[4532, 127, 169, 3, 45, "Input"],
+Cell[4704, 132, 1692, 33, 157, "Output"]
+}, Open  ]],
+Cell[6411, 168, 797, 17, 45, "Text"],
+Cell[CellGroupData[{
+Cell[7233, 189, 466, 9, 62, "Input"],
+Cell[7702, 200, 2844, 55, 110, "Output"]
+}, Open  ]],
+Cell[10561, 258, 363, 9, 45, "Text"],
+Cell[CellGroupData[{
+Cell[10949, 271, 540, 10, 62, "Input"],
+Cell[11492, 283, 129754, 2951, 447, "Output"]
+}, Open  ]],
+Cell[141261, 3237, 385, 10, 45, "Text"],
+Cell[CellGroupData[{
+Cell[141671, 3251, 1442, 27, 194, "Input"],
+Cell[143116, 3280, 1702, 32, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144855, 3317, 439, 8, 62, "Input"],
+Cell[145297, 3327, 11336, 215, 446, "Output"]
+}, Open  ]],
+Cell[156648, 3545, 738, 18, 74, "Text"],
+Cell[CellGroupData[{
+Cell[157411, 3567, 481, 9, 62, "Input"],
+Cell[157895, 3578, 19361, 496, 183, "Output"]
+}, Open  ]],
+Cell[177271, 4077, 677, 17, 45, "Text"],
+Cell[CellGroupData[{
+Cell[177973, 4098, 667, 13, 62, "Input"],
+Cell[178643, 4113, 348, 5, 104, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[179028, 4123, 663, 13, 62, "Input"],
+Cell[179694, 4138, 1267, 24, 62, "Output"]
+}, Open  ]],
+Cell[180976, 4165, 166, 3, 45, "Text"],
+Cell[CellGroupData[{
+Cell[181167, 4172, 621, 12, 62, "Input"],
+Cell[181791, 4186, 1167, 23, 62, "Output"]
+}, Open  ]],
+Cell[182973, 4212, 105, 1, 45, "Text"],
+Cell[CellGroupData[{
+Cell[183103, 4217, 252, 5, 45, "Input"],
+Cell[183358, 4224, 1167, 23, 62, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,315 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13223,        307]
+NotebookOptionsPosition[     12517,        275]
+NotebookOutlinePosition[     13211,        304]
+CellTagsIndexPosition[     13120,        298]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Did you forget how to use Mathematica?", "Title",
+ CellChangeTimes->{{3.6866210760736637`*^9, 3.686621078304574*^9}, {
+   3.686621118281272*^9, 3.6866211455596595`*^9}, 3.6866211777070065`*^9, {
+   3.6866218625758915`*^9, 3.6866218752257843`*^9}},
+ CellTags->"title"],
+
+Cell[TextData[{
+ StyleBox["Again? You spent all this money, charging up vulgar debt only to \
+forget how to use this software? You\[CloseCurlyQuote]ve been intimidated and \
+captivated by Mathematica since the mid-1980s. You have to turn this \
+computational environment into a familiar mental landscape! This is a tool \
+that makes documents, ", "Text"],
+ StyleBox["living", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" documents of computational data with human commentary. This tool \
+should be as familiar as ", "Text"],
+ StyleBox[ButtonBox["Microsoft Word",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://products.office.com/en-us/word"], None},
+  ButtonNote->"https://products.office.com/en-us/word"], "Text",
+  FontSize->14],
+ StyleBox[" is to you\[LongDash]it ", "Text"],
+ StyleBox["will", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" be.\nThe page layout features of Mathematica are limited (cells \
+are stacked vertically and cannot be laid out side by side in multiple \
+columns which must be why notebooks are often displayed by default in narrow \
+windows)\[LongDash]but they should be reviewed first because we are making \
+human-readable documents here. First of all, this sentence should be the \
+second paragraph in the second cell of this document (enter ", "Text"],
+ StyleBox["Ctrl+Shift+e", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" to invoke ", "Text"],
+ StyleBox["Cell > Show Expression", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" to see the ", "Text"],
+ StyleBox[ButtonBox["StyleBox",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/StyleBox.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/StyleBox.html"], 
+  "Text"],
+ StyleBox[" ", "Text"],
+ StyleBox[ButtonBox["TextData",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/TextData.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/TextData.html"], 
+  "Text"],
+ StyleBox[" of the ", "Text"],
+ StyleBox[ButtonBox["Cell",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/ref/Cell.html"], None},
+  ButtonNote->"http://reference.wolfram.com/language/ref/Cell.html"], "Text"],
+ StyleBox["\[LongDash]and that ", "Text"],
+ StyleBox["everything", "Text",
+  FontSlant->"Italic"],
+ StyleBox[" in a notebook is a Wolfram Language Expression). You started \
+writing this document by using the menu (since you have forgotten the \
+keyboard commands). You selected ", "Text"],
+ StyleBox["Window > Toolbar > Formatting", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" to show the ", "Text"],
+ StyleBox["Formatting Toolbar", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" which will allow you to see what style is in use as you move the \
+up/down arrow keys to move among the cells of this document. You also \
+selected ", "Text"],
+ StyleBox["Format > Stylesheet > ReverseColor", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" to get a dark background (easier on the eyes but will drain the \
+ink from a printer so beware!).\nYou are generating new paragraphs by hitting \
+the enter key within this second cell. You are not sure whether these are \
+line breaks or paragraph breaks because there appears to be no line spacing \
+expected from, say, Microsoft Word paragraph breaks. By convention, you are \
+using ", "Text"],
+ StyleBox["Ctrl+i", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" for italics and ", "Text"],
+ StyleBox["Ctrl+b", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" for bold and these commands are working as expected. (You also \
+noticed the ", "Text"],
+ StyleBox["Ctrl+.", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" command from ", "Text"],
+ StyleBox["Edit > Extend Selection", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" menu item. This allows you to select cells and cut (with ", 
+  "Text"],
+ StyleBox["Ctrl+x", "Text",
+  FontWeight->"Bold"],
+ StyleBox[") or delete them.) The italics/bold keyboard commands appear as \
+tooltips in the ", "Text"],
+ StyleBox["Writing Assistant", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" palette under the ", "Text"],
+ StyleBox["Writing and Formatting", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" pane. This assistant does not show any paragraph-spacing values. \
+You do see this after searching for ", "Text"],
+ StyleBox["ParagraphSpacing", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" in the ", "Text"],
+ StyleBox["Option Inspector", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" (available under the ", "Text"],
+ StyleBox["Format", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" menu, making sure that the first dropdown is set to ", "Text"],
+ StyleBox["Global Preferences", "Text",
+  FontWeight->"Bold"],
+ StyleBox[").\nThe keyboard command to make hyperlinks is ", "Text"],
+ StyleBox["Shift+Ctrl+h", "Text",
+  FontWeight->"Bold"],
+ StyleBox[". You notice here in Mathematica 11 that inserting a hyperlink \
+makes the font size increase. You might use the ", "Text"],
+ StyleBox["Alt+-", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" command to decrease the size but the ", "Text"],
+ StyleBox["Formatting Toolbar", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" shows you that the style is ", "Text"],
+ StyleBox["Chapter", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" for hyperlinks by default (probably because hyperlinks are \
+expected to be used for a ", "Text"],
+ StyleBox[ButtonBox["table of contents",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://reference.wolfram.com/language/AuthorTools/tutorial/\
+MakeContents.html"], None},
+  ButtonNote->
+   "http://reference.wolfram.com/language/AuthorTools/tutorial/MakeContents.\
+html"], "Text"],
+ StyleBox[" more often)\[LongDash]change the style to ", "Text"],
+ StyleBox["Text", "Text",
+  FontWeight->"Bold"],
+ StyleBox[" with the hyperlink selected to get the correct font size. Now \
+that you know how to make hyperlinks, you can list the YouTube videos with \
+all the tutorials you have seen and forgotten about:\n\[Bullet] \
+\[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Hands-on Start to Mathematica: Notebooks",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.youtube.com/watch?v=oPaLAS9-nBg"], None},
+  ButtonNote->"https://www.youtube.com/watch?v=oPaLAS9-nBg"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote]\[LineSeparator]\[Bullet] \
+\[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Introduction to the Wolfram Language Part 1",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.youtube.com/watch?v=DLUOgXGouVY"], None},
+  ButtonNote->"https://www.youtube.com/watch?v=DLUOgXGouVY"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote]\[LineSeparator]\[Bullet] \
+\[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Professor Richard J. Gaylord\[CloseCurlyQuote]s Wolfram \
+Language Fundamentals Part One",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.youtube.com/watch?v=H-rnezxOCA8"], None},
+  ButtonNote->"https://www.youtube.com/watch?v=H-rnezxOCA8"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote]\[LineSeparator]\[Bullet] \
+\[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Term-Rewriting in JavaScript for Fun and World \
+Domination",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.youtube.com/watch?v=S2OEPFbsl50"], None},
+  ButtonNote->"https://www.youtube.com/watch?v=S2OEPFbsl50"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote]\[LineSeparator]\[Bullet] \
+\[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Suppress the OutpEut of a Computation",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/howto/\
+SuppressTheOutputOfAComputation.html"], None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/howto/\
+SuppressTheOutputOfAComputation.html"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote] (hint: use the semi-colon to suppress \
+output)\[LineSeparator]\[Bullet] \[OpenCurlyDoubleQuote]", "Text"],
+ StyleBox[ButtonBox["Keyboard Shortcut Listing",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/tutorial/\
+KeyboardShortcutListing.html"], None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/tutorial/KeyboardShortcutListing.\
+html"], "Text",
+  FontSize->14],
+ StyleBox["\[CloseCurlyDoubleQuote]\nThe \[OpenCurlyDoubleQuote]special \
+characters\[CloseCurlyDoubleQuote] of this list came from the ", "Text"],
+ StyleBox[ButtonBox["escape sequences",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/guide/\
+ListingOfNamedCharacters.html"], None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/guide/ListingOfNamedCharacters.\
+html"], "Text",
+  FontSize->14],
+ StyleBox[" defined by Mathematica.", "Text"]
+}], "Chapter",
+ CellChangeTimes->{{3.686621217348284*^9, 3.686621228862791*^9}, {
+   3.6866213678282595`*^9, 3.6866213787067795`*^9}, {3.68662146972911*^9, 
+   3.6866214697311106`*^9}, {3.686621519632868*^9, 3.6866215208983464`*^9}, {
+   3.686621620721087*^9, 3.68662162237361*^9}, {3.686621937686555*^9, 
+   3.686622179447228*^9}, {3.6866222161992087`*^9, 3.6866222579713254`*^9}, {
+   3.6866223974742765`*^9, 3.686622412289223*^9}, {3.686622558792587*^9, 
+   3.686622784237671*^9}, {3.6866228454469395`*^9, 3.6866229731178265`*^9}, {
+   3.6866231788190503`*^9, 3.686623515801359*^9}, {3.686623561257266*^9, 
+   3.686623574285325*^9}, {3.6866239216148767`*^9, 3.686624010294202*^9}, {
+   3.68662509746264*^9, 3.6866253428234386`*^9}, {3.6866255168174453`*^9, 
+   3.686625554456029*^9}, {3.6866257172605*^9, 3.686625730785873*^9}, {
+   3.686625835489294*^9, 3.6866258529608197`*^9}, {3.686625895428993*^9, 
+   3.6866259472759275`*^9}, {3.6866259921290045`*^9, 
+   3.6866260480239267`*^9}, {3.686627917654702*^9, 3.6866279365161867`*^9}, 
+   3.6866303141228533`*^9, {3.686630501398306*^9, 3.686630503976771*^9}, {
+   3.686630601187356*^9, 3.686630656761383*^9}, {3.6866308220851927`*^9, 
+   3.6866309625222807`*^9}, {3.6866310155850906`*^9, 
+   3.6866310558956113`*^9}, {3.686631092501298*^9, 3.686631115216811*^9}, 
+   3.6866311492252502`*^9, {3.6866313026377993`*^9, 3.686631314638409*^9}, {
+   3.6866313754538994`*^9, 3.6866313754598227`*^9}, {3.686631418023242*^9, 
+   3.6866314357672434`*^9}, {3.6866314935263157`*^9, 
+   3.6866315371173496`*^9}, {3.686776003039463*^9, 3.686776030427866*^9}, {
+   3.6867760751591864`*^9, 3.6867762971532516`*^9}, {3.6867764098687143`*^9, 
+   3.686776461687291*^9}, {3.6867765837487583`*^9, 3.686776612988351*^9}, {
+   3.686776649307428*^9, 3.686776675163762*^9}, {3.6867767515013733`*^9, 
+   3.686776806852413*^9}, {3.686776865354887*^9, 3.6867768911676598`*^9}, {
+   3.6868005835545135`*^9, 3.686800638841201*^9}, {3.6868412889784985`*^9, 
+   3.6868413773429794`*^9}, {3.6868423682212467`*^9, 
+   3.6868424006938176`*^9}, {3.6868424391812963`*^9, 3.6868424393250847`*^9}, 
+   3.6868424770192432`*^9, {3.68684254411996*^9, 3.6868425446522017`*^9}, {
+   3.6868425935173864`*^9, 3.686842642304655*^9}, {3.6868429276598015`*^9, 
+   3.6868429726528687`*^9}, {3.686843012136855*^9, 3.6868430444408393`*^9}, {
+   3.6868431333181553`*^9, 3.6868431531804757`*^9}, {3.686843205944044*^9, 
+   3.6868432261558723`*^9}, {3.6868432563703423`*^9, 3.686843447498979*^9}, {
+   3.6868435540436063`*^9, 3.6868435660788383`*^9}, {3.6868436111117473`*^9, 
+   3.6868436262717686`*^9}, 3.686843702643776*^9, {3.6877396611872997`*^9, 
+   3.68773971575357*^9}, {3.6877397470710945`*^9, 3.6877397470810995`*^9}, {
+   3.6877397824849052`*^9, 3.6877397824959097`*^9}, {3.687914698547721*^9, 
+   3.6879146992488413`*^9}, 3.6879183152569323`*^9},
+ CellTags->"body"]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{911, 932},
+WindowMargins->{{157, Automatic}, {17, Automatic}},
+DockedCells->{},
+TaggingRules->{"NotebookTemplateVersion" -> 1., "NotebookTemplate" -> True},
+CellContext->Notebook,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "title"->{
+  Cell[580, 22, 273, 4, 214, "Title",
+   CellTags->"title"]},
+ "body"->{
+  Cell[856, 28, 11645, 244, 1357, "Chapter",
+   CellTags->"body"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"title", 12956, 289},
+ {"body", 13029, 292}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 273, 4, 214, "Title",
+ CellTags->"title"],
+Cell[856, 28, 11645, 244, 1357, "Chapter",
+ CellTags->"body"]
+}, Open  ]]
+}
+]
+*)
+

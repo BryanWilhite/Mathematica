@@ -1,0 +1,996 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32999,        988]
+NotebookOptionsPosition[     31518,        933]
+NotebookOutlinePosition[     31893,        949]
+CellTagsIndexPosition[     31850,        946]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["UCSB Math 3 Series (from Fall 1988)", "Title",
+ CellChangeTimes->{{3.6867067358462753`*^9, 3.6867067574111495`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 9", "Chapter",
+ CellChangeTimes->{{3.68670679689596*^9, 3.6867068086208963`*^9}, 
+   3.6874772535485306`*^9}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Calculus with Analytical Geometry",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.researchgate.net/publication/44500439_Calculus_with_\
+analytic_geometry_Robert_Ellis_Denny_Gulick"], None},
+  ButtonNote->
+   "https://www.researchgate.net/publication/44500439_Calculus_with_analytic_\
+geometry_Robert_Ellis_Denny_Gulick"],
+  FontSlant->"Italic"],
+ ", 3rd. Edition, Robert Ellis & Denny Gulick"
+}], "Text",
+ CellChangeTimes->{{3.6868539424881053`*^9, 3.6868540332846127`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["9.1 Sequences and Series", "Section",
+ CellChangeTimes->{{3.687225715834087*^9, 3.6872257168442445`*^9}, {
+  3.68722578345261*^9, 3.6872258055630817`*^9}, {3.6874772591428022`*^9, 
+  3.687477273096716*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+I. What we have here is a two-part section in which polynomial approximation \
+and Taylor\[CloseCurlyQuote]s Theorem are discussed.\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.6874774745986195`*^9, 3.687477476002027*^9}, {
+  3.687477575569461*^9, 3.687477575901764*^9}}],
+
+Cell[TextData[{
+ StyleBox["A. Polynomial Approximation",
+  FontWeight->"Bold"],
+ "\nThe key to approximating the value of a function is by manufacturing a \
+polynomial with the same derivatives as the given function.\n\ta) This \
+polynomial is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "n"], "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and, for now, let us assume that x = 0 so:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\t", 
+    RowBox[{
+     SubscriptBox["p", "n"], "(", "x", ")"}]}], TraditionalForm]]],
+ " = f(0) + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "\[Prime]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(0)x + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "\[Prime]\[Prime]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(0) ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["x", "2"], 
+    RowBox[{"2", "!"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "+ ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "\[Prime]\[Prime]\[Prime]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "(0) ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["x", "3"], 
+    RowBox[{"3", "!"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\[Ellipsis] + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"(", "n", ")"}]], "(", "0", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["x", "n"], 
+    RowBox[{"n", "!"}]], TraditionalForm]]],
+ " \n\t\ti) This is called the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["N", "th"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " Taylor Polynomial.\n",
+ StyleBox["B. Taylor\[CloseCurlyQuote]s Theorem",
+  FontWeight->"Bold"],
+ "\nNot only is it useful to approximate a function with a polynomial but \
+also it is also nice to be able to approximate the function value as closely \
+as one wishes\[LongDash]within a certain amount of decimal places.\n\ta) The \
+difference between the polynomial approximation and the actual value \
+(actually ",
+ StyleBox["visa versa",
+  FontSlant->"Italic"],
+ ") is called the ",
+ StyleBox["remainder ",
+  FontSlant->"Italic"],
+ "denoted by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "x", ")"}], TraditionalForm]]],
+ ". To be \[OpenCurlyDoubleQuote]within a certain amount of decimal places\
+\[CloseCurlyDoubleQuote] means that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "x", ")"}], TraditionalForm]]],
+ " must be less than the given fraction.\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "x", ")"}], TraditionalForm]]],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", 
+       RowBox[{"n", " ", "+", "1"}], ")"}]], "(", 
+     SubscriptBox["t", "x"], ")"}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", " ", "+", " ", "1"}], ")"}], "!"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", 
+    RowBox[{"n", "+", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nwhere y = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"(", 
+      RowBox[{"n", " ", "+", "1"}], ")"}]], "(", 
+    SubscriptBox["t", "x"], ")"}], TraditionalForm]]],
+ " and where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "x"], TraditionalForm]]],
+ " is some value between 0 and x. Note that y assumes a value such that the \
+function is less than or equal to within the interval 0 \[LongRightArrow] x.\n\
+\t\ti) Once y and x values are determined n is computed by experimenting with \
+how many polynomials it takes to make ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "x", ")"}], TraditionalForm]]],
+ " < [error remainder]: to what ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["n", "th"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " degree is the basic question."
+}], "Text",
+ CellChangeTimes->{{3.687225972003363*^9, 3.687226076888053*^9}, {
+   3.6872265105332317`*^9, 3.687226511837578*^9}, {3.687226908227118*^9, 
+   3.6872269172480993`*^9}, {3.6874774846723204`*^9, 3.687477554660721*^9}, {
+   3.687477607159897*^9, 3.68747767740934*^9}, {3.6874778075854335`*^9, 
+   3.6874783133041525`*^9}, 3.6874784119828176`*^9, 3.6874784433452644`*^9, {
+   3.687478578871937*^9, 3.687478620374473*^9}, {3.687478656854928*^9, 
+   3.687478715309662*^9}, {3.687478746893134*^9, 3.6874791902711377`*^9}, {
+   3.6874792957085056`*^9, 3.6874793759515553`*^9}, {3.6874794066856356`*^9, 
+   3.687479456707056*^9}, {3.6874795675130887`*^9, 3.6874796004330645`*^9}, {
+   3.687480628149012*^9, 3.687480735320933*^9}, {3.687481000811386*^9, 
+   3.6874811611211815`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Example:",
+  FontWeight->"Bold"],
+ " Approximate \[ExponentialE] with an error less than 0.001:\nit follows \
+that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "x", ")"}], TraditionalForm]]],
+ " < 0.001 and since \[ExponentialE] = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ExponentialE]", "1"], TraditionalForm]]],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ExponentialE]", "x"], TraditionalForm]]],
+ " where x = 1 (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "x"], TraditionalForm]]],
+ " \[LongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "1"], TraditionalForm]]],
+ ") with ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ExponentialE]", "\[Prime]"], TraditionalForm]]],
+ ", \[ExponentialE] can never be greater than a number like \
+four\[LongDash]so, since ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ExponentialE]", "\[Prime]"], TraditionalForm]]],
+ " < 4:\n\t4 = y = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"(", 
+      RowBox[{"n", " ", "+", "1"}], ")"}]], "(", 
+    SubscriptBox["t", "x"], ")"}], TraditionalForm]]],
+ "\nnow:"
+}], "Text",
+ CellChangeTimes->{{3.687481424717663*^9, 3.6874814608598585`*^9}, {
+   3.6874815063611097`*^9, 3.6874815502656174`*^9}, {3.687481623476658*^9, 
+   3.687481656274196*^9}, {3.6874817230599356`*^9, 3.687481928416024*^9}, {
+   3.687481999117136*^9, 3.687482089454528*^9}, {3.6874822619035482`*^9, 
+   3.6874823971728*^9}, {3.6874824325455685`*^9, 3.6874824359530387`*^9}, 
+   3.6874834392603807`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r", "[", 
+   RowBox[{"x_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox["4", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", "+", "1"}], ")"}], "!"}]], 
+   SuperscriptBox["x", 
+    RowBox[{"n", "+", "1"}]]}]}]], "Input",
+ CellChangeTimes->{{3.6874821923984833`*^9, 3.6874822284084463`*^9}, 
+   3.687482258579135*^9, {3.687482457995223*^9, 3.6874825683877974`*^9}, 
+   3.6874826140838814`*^9, 3.6874826999757423`*^9, 3.6874833201463366`*^9, {
+   3.6874835360422473`*^9, 3.6874835395550537`*^9}, {3.6874924641802597`*^9, 
+   3.6874924651917925`*^9}}],
+
+Cell[TextData[{
+ "through trial and error we discover that \[LeftBracketingBar]",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["r", "n"], "(", "1", ")"}], TraditionalForm]]],
+ "\[RightBracketingBar] < 0.001 if n \[GreaterSlantEqual] 6"
+}], "Text",
+ CellChangeTimes->{{3.687482775927791*^9, 3.687482860328062*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"r", "[", 
+   RowBox[{"1", ",", "6"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.687483561566066*^9, 3.687483568011393*^9}, {
+  3.687483732341259*^9, 3.687483804372108*^9}, {3.6874838512706285`*^9, 
+  3.6874838872220235`*^9}, {3.6874924704735613`*^9, 3.6874924712240114`*^9}}],
+
+Cell[BoxData["0.0007936507936507937`"], "Output",
+ CellChangeTimes->{
+  3.687483569243925*^9, 3.687483695769309*^9, {3.6874837508206625`*^9, 
+   3.687483804894823*^9}, 3.6874838542787*^9, 3.687483888132109*^9, 
+   3.687484599495164*^9, 3.687485871979173*^9, 3.6874922710689135`*^9, 
+   3.6874924929745045`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r", "[", 
+   RowBox[{"1", ",", "n"}], "]"}], "<", "0.001"}]], "Input",
+ CellChangeTimes->{
+  3.687483935515489*^9, {3.687484181339946*^9, 3.687484185923676*^9}, {
+   3.6874924742962866`*^9, 3.6874924749704795`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["4", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", "n"}], ")"}], "!"}]], "<", "0.001`"}]], "Output",
+ CellChangeTimes->{3.687483936180249*^9, 3.687484187287241*^9, 
+  3.6874845995086823`*^9, 3.6874858719911823`*^9, 3.6874922710879283`*^9, 
+  3.6874924929940233`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "thus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "6"], "(", "1", ")"}], TraditionalForm]]],
+ " is the desired approximation."
+}], "Text",
+ CellChangeTimes->{{3.6874842299536915`*^9, 3.687484276324564*^9}, {
+  3.687484462604061*^9, 3.6874844711013203`*^9}, {3.6874920169869337`*^9, 
+  3.6874920405295134`*^9}, {3.6874920915599747`*^9, 3.687492108160801*^9}, {
+  3.68749216649022*^9, 3.687492175067505*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  SuperscriptBox["\[ExponentialE]", "x"]}]], "Input",
+ CellChangeTimes->{{3.687484476966531*^9, 3.6874845175793676`*^9}}],
+
+Cell["Because of the zero rules of exponents, we know that:", "Text",
+ CellChangeTimes->{{3.6874842299536915`*^9, 3.687484276324564*^9}, {
+   3.687484462604061*^9, 3.6874844711013203`*^9}, {3.6874920169869337`*^9, 
+   3.6874920405295134`*^9}, {3.6874920915599747`*^9, 3.687492108160801*^9}, 
+   3.68749216649022*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VerificationTest", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "0", "]"}], "\[Equal]", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.687484603202422*^9, 3.6874846144159203`*^9}, 
+   3.68748501855062*^9, {3.687492193840774*^9, 3.687492235076322*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestResultObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False}, 
+    PanelBox[
+     PaneSelectorBox[{False->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquarePlusIconMedium"],
+            ImageSizeCache->{18., {0., 18.}}],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = True),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[InsetBox[
+           PaneBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "MUnitExpressions", "SuccessIcon"],
+             ImageSizeCache->{24., {5., 13.}}],
+            Alignment->Center,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]]],
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]]},
+          PlotRange->{{0, 1}, {0, 1}}], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Outcome: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Success\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Test ID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["None",
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquareMinusIconMedium"]],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = False),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[InsetBox[
+           PaneBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "MUnitExpressions", "SuccessIcon"]],
+            Alignment->Center,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]]],
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]]},
+          PlotRange->{{0, 1}, {0, 1}}], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Outcome: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Success\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Test ID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["None",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Input: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox[
+                RowBox[{
+                 RowBox[{"f", "[", "0", "]"}], "\[Equal]", "1"}],
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Expected output: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox["True",
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Actual output: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox["True",
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Time Taken: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox[
+                
+                TemplateBox[{
+                 "0``7.1505149978319915","\"s\"","seconds","\"Seconds\""},
+                 "Quantity"],
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+      Typeset`open$$],
+      ImageSize->Automatic],
+     BaselinePosition->Baseline],
+    DynamicModuleValues:>{}], "]"}],
+  TestResultObject[
+   Association[
+   "TestIndex" -> 4, "TestID" -> None, "Outcome" -> "Success", "Input" -> 
+    HoldForm[$CellContext`f[0] == 1], "ExpectedOutput" -> HoldForm[True], 
+    "ActualOutput" -> HoldForm[True], "ExpectedMessages" -> {}, 
+    "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+    Quantity[0``7.1505149978319915, "Seconds"], "CPUTimeUsed" -> 
+    Quantity[0., "Seconds"], "MemoryUsed" -> Quantity[32, "Bytes"]]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.6874922380003176`*^9, 3.6874922711835117`*^9, 
+  3.6874924930802965`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Recall that all derivatives of ",
+ StyleBox["f(x) = ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[ExponentialE]", "x"], TraditionalForm]]],
+ " are equal to ",
+ StyleBox["f(x)",
+  FontSlant->"Italic"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.6874852999435825`*^9, 3.6874853248796787`*^9}, {
+  3.6874918410348988`*^9, 3.6874918576345615`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VerificationTest", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], "==", 
+   RowBox[{
+    RowBox[{"f", "'"}], "[", "x", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"f", "''"}], "[", "x", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"f", "'''"}], "[", "x", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"f", "''''"}], "[", "x", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"f", "'''''"}], "[", "x", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"f", "''''''"}], "[", "x", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6874851079642344`*^9, 3.6874851193950396`*^9}, {
+  3.6874851632338476`*^9, 3.6874851821641564`*^9}, {3.6874852183401527`*^9, 
+  3.68748527450828*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestResultObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False}, 
+    PanelBox[
+     PaneSelectorBox[{False->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquarePlusIconMedium"],
+            ImageSizeCache->{18., {0., 18.}}],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = True),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[InsetBox[
+           PaneBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "MUnitExpressions", "SuccessIcon"],
+             ImageSizeCache->{24., {5., 13.}}],
+            Alignment->Center,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]]],
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]]},
+          PlotRange->{{0, 1}, {0, 1}}], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Outcome: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Success\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Test ID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["None",
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+        {
+         PaneBox[
+          ButtonBox[
+           
+           DynamicBox[FEPrivate`FrontEndResource[
+            "FEBitmaps", "SquareMinusIconMedium"]],
+           Appearance->None,
+           ButtonFunction:>(Typeset`open$$ = False),
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          Alignment->{Center, Center},
+          
+          ImageSize->
+           Dynamic[{
+            Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]}]], 
+         GraphicsBox[InsetBox[
+           PaneBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "MUnitExpressions", "SuccessIcon"]],
+            Alignment->Center,
+            
+            ImageSize->
+             Dynamic[{
+              Automatic, 3.5 CurrentValue["FontCapHeight"]/
+               AbsoluteCurrentValue[Magnification]}]]],
+          AspectRatio->1,
+          Axes->False,
+          Background->GrayLevel[0.93],
+          Frame->True,
+          FrameStyle->Directive[
+            Thickness[Tiny], 
+            GrayLevel[0.55]],
+          FrameTicks->None,
+          ImageSize->{Automatic, 
+            Dynamic[
+            3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification]]},
+          PlotRange->{{0, 1}, {0, 1}}], GridBox[{
+           {
+            RowBox[{
+             TagBox["\<\"Outcome: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["\<\"Success\"\>",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Test ID: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox["None",
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Input: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox[
+                RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}],
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Expected output: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox["True",
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Actual output: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox["True",
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]},
+           {
+            RowBox[{
+             TagBox["\<\"Time Taken: \"\>",
+              "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+             TagBox[
+              PaneBox[
+               TagBox[
+                
+                TemplateBox[{
+                 "0.0005005`3.849919079647329","\"s\"","seconds",
+                  "\"Seconds\""},
+                 "Quantity"],
+                Short[#, 
+                 Rational[2, 3]]& ],
+               BaselinePosition->Baseline,
+               ContentPadding->False,
+               FrameMargins->0,
+               ImageSize->{{1, 500}, Automatic},
+               StripOnInput->True],
+              "SummaryItem"]}]}
+          },
+          AutoDelete->False,
+          
+          BaseStyle->{
+           ShowStringCharacters -> False, NumberMarks -> False, 
+            PrintPrecision -> 3, ShowSyntaxStyles -> False},
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+       },
+       AutoDelete->False,
+       BaselinePosition->{1, 1},
+       GridBoxAlignment->{"Rows" -> {{Top}}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+      Typeset`open$$],
+      ImageSize->Automatic],
+     BaselinePosition->Baseline],
+    DynamicModuleValues:>{}], "]"}],
+  TestResultObject[
+   Association[
+   "TestIndex" -> 5, "TestID" -> None, "Outcome" -> "Success", "Input" -> 
+    HoldForm[$CellContext`f[$CellContext`x] == 
+      Derivative[1][$CellContext`f][$CellContext`x] == 
+      Derivative[2][$CellContext`f][$CellContext`x] == 
+      Derivative[3][$CellContext`f][$CellContext`x] == 
+      Derivative[4][$CellContext`f][$CellContext`x] == 
+      Derivative[5][$CellContext`f][$CellContext`x] == 
+      Derivative[6][$CellContext`f][$CellContext`x]], "ExpectedOutput" -> 
+    HoldForm[True], "ActualOutput" -> HoldForm[True], 
+    "ExpectedMessages" -> {}, "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+    Quantity[0.0005005`3.849919079647329, "Seconds"], "CPUTimeUsed" -> 
+    Quantity[0., "Seconds"], "MemoryUsed" -> Quantity[112, "Bytes"]]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.6874851206018257`*^9, {3.687485167777836*^9, 3.6874851834597816`*^9}, {
+   3.68748525396486*^9, 3.6874852758309727`*^9}, 3.687485872060749*^9, 
+   3.687492271250569*^9, 3.68749249315784*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"p6", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"f", "[", "0", "]"}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "'"}], "[", "0", "]"}], "x"}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "''"}], "[", "0", "]"}], 
+     FractionBox[
+      SuperscriptBox["x", "2"], 
+      RowBox[{"2", "!"}]]}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "'''"}], "[", "0", "]"}], 
+     FractionBox[
+      SuperscriptBox["x", "3"], 
+      RowBox[{"3", "!"}]]}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "''''"}], "[", "0", "]"}], 
+     FractionBox[
+      SuperscriptBox["x", "4"], 
+      RowBox[{"4", "!"}]]}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "'''''"}], "[", "0", "]"}], 
+     FractionBox[
+      SuperscriptBox["x", "5"], 
+      RowBox[{"5", "!"}]]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"p6", "[", "1", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6874854075629206`*^9, 3.6874854146841345`*^9}, {
+  3.6874854451119633`*^9, 3.6874854621898003`*^9}, {3.6874855519640083`*^9, 
+  3.6874856236399746`*^9}, {3.6874856863548546`*^9, 3.6874858997243032`*^9}, {
+  3.6874859316646876`*^9, 3.6874859704424753`*^9}, {3.687486005762971*^9, 
+  3.6874860081369066`*^9}, {3.6874860872308846`*^9, 3.6874861040349197`*^9}, {
+  3.687492386258439*^9, 3.6874924113415527`*^9}}],
+
+Cell[BoxData["2.716666666666667`"], "Output",
+ CellChangeTimes->{3.6874859743807774`*^9, 3.687492271264574*^9, 
+  3.6874924931758575`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"r", ",", "f", ",", "p6"}], "]"}]], "Input",
+ CellChangeTimes->{{3.687492328124086*^9, 3.687492330952121*^9}, {
+  3.6874924215565653`*^9, 3.687492437524681*^9}, {3.6874924868848352`*^9, 
+  3.687492487111045*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1274, 898},
+WindowMargins->{{62, Automatic}, {37, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 122, 1, 134, "Title"],
+Cell[CellGroupData[{
+Cell[727, 27, 123, 2, 95, "Chapter"],
+Cell[853, 31, 528, 12, 45, "Text"],
+Cell[CellGroupData[{
+Cell[1406, 47, 212, 3, 93, "Section"],
+Cell[CellGroupData[{
+Cell[1643, 54, 281, 5, 86, "Subsubsection"],
+Cell[1927, 61, 4862, 148, 666, "Text"],
+Cell[6792, 211, 1586, 49, 201, "Text"],
+Cell[8381, 262, 595, 15, 74, "Input"],
+Cell[8979, 279, 323, 8, 45, "Text"],
+Cell[CellGroupData[{
+Cell[9327, 291, 324, 6, 45, "Input"],
+Cell[9654, 299, 310, 5, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10001, 309, 250, 6, 45, "Input"],
+Cell[10254, 317, 312, 8, 67, "Output"]
+}, Open  ]],
+Cell[10581, 328, 442, 11, 45, "Text"],
+Cell[11026, 341, 185, 4, 45, "Input"],
+Cell[11214, 347, 316, 4, 45, "Text"],
+Cell[CellGroupData[{
+Cell[11555, 355, 267, 5, 45, "Input"],
+Cell[11825, 362, 8107, 230, 101, "Output"]
+}, Open  ]],
+Cell[19947, 595, 386, 13, 45, "Text"],
+Cell[CellGroupData[{
+Cell[20358, 612, 689, 18, 45, "Input"],
+Cell[21050, 632, 8582, 238, 101, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29669, 875, 1381, 40, 107, "Input"],
+Cell[31053, 917, 138, 2, 45, "Output"]
+}, Open  ]],
+Cell[31206, 922, 260, 5, 45, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

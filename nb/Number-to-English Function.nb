@@ -1,0 +1,383 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17992,        375]
+NotebookOptionsPosition[     17570,        355]
+NotebookOutlinePosition[     17946,        371]
+CellTagsIndexPosition[     17903,        368]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Number-to-English Function", "Title",
+ CellChangeTimes->{{3.6898243012658234`*^9, 3.6898243223779607`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"numberToEnglish", "[", "x_", "]"}], ":=", 
+   RowBox[{"IntegerName", "[", 
+    RowBox[{"IntegerPart", "[", 
+     RowBox[{"QuantityMagnitude", "[", "x", "]"}], "]"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"label1", "=", 
+   RowBox[{
+    RowBox[{"CommonName", "[", 
+     TemplateBox[{
+      "\"total number of speakers\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"Language\"", ",", "\"TotalSpeakers\""}], "]"}],
+       "\"EntityProperty[\\\"Language\\\", \\\"TotalSpeakers\\\"]\""},
+      "EntityProperty"], "]"}], "<>", "\"\< of \>\"", " ", "<>", 
+    RowBox[{
+     TemplateBox[{"\"German\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Language\"", ",", "\"German\""}], "]"}],
+       "\"Entity[\\\"Language\\\", \\\"German\\\"]\"","\"language\""},
+      "Entity"], "[", 
+     TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"Language\"", ",", "\"Name\""}], "]"}],
+       "\"EntityProperty[\\\"Language\\\", \\\"Name\\\"]\""},
+      "EntityProperty"], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"label2", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"CommonName", "[", 
+     TemplateBox[{
+      "\"aggregate household income\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{
+          "\"AdministrativeDivision\"", ",", "\"AggregateHouseholdIncome\""}],
+          "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AggregateHouseholdIncome\\\"]\""},
+      "EntityProperty"], "]"}], " ", "<>", " ", "\"\< in \>\"", " ", "<>", 
+    " ", 
+    RowBox[{
+     TemplateBox[{"\"Alaska, United States\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"AdministrativeDivision\"", ",", 
+           RowBox[{"{", 
+             RowBox[{"\"Alaska\"", ",", "\"UnitedStates\""}], "}"}]}], "]"}],
+       "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Alaska\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+      "Entity"], "[", 
+     TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"AdministrativeDivision\"", ",", "\"Name\""}], "]"}],
+       "\"EntityProperty[\\\"AdministrativeDivision\\\", \\\"Name\\\"]\""},
+      "EntityProperty"], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"label3", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"CommonName", "[", 
+     TemplateBox[{
+      "\"adjusted net national income\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"Country\"", ",", "\"AdjustedNetNationalIncome\""}], "]"}],
+       "\"EntityProperty[\\\"Country\\\", \
+\\\"AdjustedNetNationalIncome\\\"]\""},
+      "EntityProperty"], "]"}], "<>", " ", "\"\< in \>\"", " ", "<>", " ", 
+    RowBox[{
+     TemplateBox[{"\"Iceland\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"Country\"", ",", "\"Iceland\""}], "]"}],
+       "\"Entity[\\\"Country\\\", \\\"Iceland\\\"]\"","\"country\""},
+      "Entity"], "[", 
+     TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"Country\"", ",", "\"Name\""}], "]"}],
+       "\"EntityProperty[\\\"Country\\\", \\\"Name\\\"]\""},
+      "EntityProperty"], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"association", " ", "=", " ", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"label1", "->", 
+      RowBox[{"numberToEnglish", "[", 
+       RowBox[{
+        TemplateBox[{"\"German\"",RowBox[{"Entity", "[", 
+            RowBox[{"\"Language\"", ",", "\"German\""}], "]"}],
+          "\"Entity[\\\"Language\\\", \\\"German\\\"]\"","\"language\""},
+         "Entity"], "[", 
+        TemplateBox[{
+         "\"total number of speakers\"",RowBox[{"EntityProperty", "[", 
+            RowBox[{"\"Language\"", ",", "\"TotalSpeakers\""}], "]"}],
+          "\"EntityProperty[\\\"Language\\\", \\\"TotalSpeakers\\\"]\""},
+         "EntityProperty"], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"label2", "->", 
+      RowBox[{"numberToEnglish", "[", 
+       RowBox[{
+        TemplateBox[{"\"Alaska, United States\"",RowBox[{"Entity", "[", 
+            RowBox[{"\"AdministrativeDivision\"", ",", 
+              RowBox[{"{", 
+                RowBox[{"\"Alaska\"", ",", "\"UnitedStates\""}], "}"}]}], 
+            "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Alaska\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+         "Entity"], "[", 
+        TemplateBox[{
+         "\"aggregate household income\"",RowBox[{"EntityProperty", "[", 
+            
+            RowBox[{"\"AdministrativeDivision\"", ",", 
+              "\"AggregateHouseholdIncome\""}], "]"}],
+          "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AggregateHouseholdIncome\\\"]\""},
+         "EntityProperty"], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"label3", "->", 
+      RowBox[{"numberToEnglish", "[", 
+       RowBox[{
+        TemplateBox[{"\"Iceland\"",RowBox[{"Entity", "[", 
+            RowBox[{"\"Country\"", ",", "\"Iceland\""}], "]"}],
+          "\"Entity[\\\"Country\\\", \\\"Iceland\\\"]\"","\"country\""},
+         "Entity"], "[", 
+        TemplateBox[{
+         "\"adjusted net national income\"",RowBox[{"EntityProperty", "[", 
+            RowBox[{"\"Country\"", ",", "\"AdjustedNetNationalIncome\""}], 
+            "]"}],"\"EntityProperty[\\\"Country\\\", \
+\\\"AdjustedNetNationalIncome\\\"]\""},
+         "EntityProperty"], "]"}], "]"}]}]}], "|>"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Dataset", "[", "association", "]"}]}], "Input",
+ CellChangeTimes->{{3.68982436370638*^9, 3.689824364031948*^9}, 
+   3.689824942896123*^9, {3.689830458839977*^9, 3.68983051643388*^9}, {
+   3.6898313102093697`*^9, 3.6898313430651007`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 3, "Length" -> 3, "InitialType" -> TypeSystem`Assoc[
+          TypeSystem`Atom[
+           TypeSystem`Enumeration[
+           "adjusted net national income in Iceland", 
+            "aggregate household income in Alaska, United States", 
+            "total number of speakers of German"]], 
+          TypeSystem`Atom[String], 3], "Shape" -> 
+        TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`ColumnShape[
+           TypeSystem`PackageScope`KeyValueShape[
+            TypeSystem`PackageScope`AtomShape[489.6000000000001], 
+            TypeSystem`PackageScope`AtomShape[374.40000000000003`]]], 3, {}], 
+        "InitialData" -> TypeSystem`PackageScope`CacheHandle[1412060395], 
+        "Type" -> TypeSystem`Assoc[
+          TypeSystem`Atom[
+           TypeSystem`Enumeration[
+           "adjusted net national income in Iceland", 
+            "aggregate household income in Alaska, United States", 
+            "total number of speakers of German"]], 
+          TypeSystem`Atom[String], 3], "HandleQ" -> True, "RowTarget" -> 20, 
+        "Data" -> TypeSystem`PackageScope`CacheHandle[1412060395]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Pane[
+                "total number of speakers of German", 
+                 ImageSize -> {{489.6000000000001, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["127 million", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1257429881][
+                  GeneralUtilities`Slice[
+                   Key["total number of speakers of German"]]], "Mouse"], 
+                ImageSize -> {{374.40000000000003`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                "aggregate household income in Alaska, United States", 
+                 ImageSize -> {{489.6000000000001, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["21 billion 809 million 957 thousand 800", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1257429881][
+                  GeneralUtilities`Slice[
+                   Key[
+                   "aggregate household income in Alaska, United States"]]], 
+                 "Mouse"], 
+                ImageSize -> {{374.40000000000003`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Pane[
+                "adjusted net national income in Iceland", 
+                 ImageSize -> {{489.6000000000001, Full}, Automatic}], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation["12 billion 524 million 300 thousand 265", 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1257429881][
+                  GeneralUtilities`Slice[
+                   Key["adjusted net national income in Iceland"]]], "Mouse"],
+                 ImageSize -> {{374.40000000000003`, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}}, BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1257429881][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        Initialization :> If[
+          Not[$CloudEvaluation], 
+          TypeSystem`NestedGrid`PackagePrivate`attachScrollbar[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$]], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+         TypeSystem`PackageScope`Pathbar[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+          TypeSystem`NestedGrid`PackagePrivate`updateState[
+          TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1257429881]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1257429881][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1257429881][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+         TypeSystem`NestedGrid`PackagePrivate`shiftRight[{
+          TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`$state$$]], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]], DynamicModuleValues :> {}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$]], Deploy, 
+    DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ CellChangeTimes->{
+  3.6898278107903986`*^9, 3.6898279575958557`*^9, {3.6898293707595015`*^9, 
+   3.6898293824397297`*^9}, 3.6898295012825594`*^9, 3.6898298195043173`*^9, 
+   3.6898299567903767`*^9, 3.689830090065481*^9, 3.6898302092842093`*^9, 
+   3.6898313523874702`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1485, 898},
+WindowMargins->{{128, Automatic}, {Automatic, 38}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 113, 1, 134, "Title"],
+Cell[CellGroupData[{
+Cell[718, 27, 5599, 120, 363, "Input"],
+Cell[6320, 149, 11222, 202, 192, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
