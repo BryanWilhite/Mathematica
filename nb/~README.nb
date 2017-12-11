@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13223,        307]
-NotebookOptionsPosition[     12517,        275]
-NotebookOutlinePosition[     13211,        304]
-CellTagsIndexPosition[     13120,        298]
+NotebookDataLength[     13246,        307]
+NotebookOptionsPosition[     12540,        275]
+NotebookOutlinePosition[     13234,        304]
+CellTagsIndexPosition[     13143,        298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -198,7 +198,7 @@ Domination",
   FontSize->14],
  StyleBox["\[CloseCurlyDoubleQuote]\[LineSeparator]\[Bullet] \
 \[OpenCurlyDoubleQuote]", "Text"],
- StyleBox[ButtonBox["Suppress the OutpEut of a Computation",
+ StyleBox[ButtonBox["Suppress the Output of a Computation",
   BaseStyle->"Hyperlink",
   ButtonData->{
     URL["https://reference.wolfram.com/language/howto/\
@@ -269,7 +269,7 @@ html"], "Text",
    3.6868436262717686`*^9}, 3.686843702643776*^9, {3.6877396611872997`*^9, 
    3.68773971575357*^9}, {3.6877397470710945`*^9, 3.6877397470810995`*^9}, {
    3.6877397824849052`*^9, 3.6877397824959097`*^9}, {3.687914698547721*^9, 
-   3.6879146992488413`*^9}, 3.6879183152569323`*^9},
+   3.6879146992488413`*^9}, 3.6879183152569323`*^9, 3.7218722299876623`*^9},
  CellTags->"body"]
 }, Open  ]]
 },
@@ -291,14 +291,14 @@ CellTagsIndex->{
   Cell[580, 22, 273, 4, 214, "Title",
    CellTags->"title"]},
  "body"->{
-  Cell[856, 28, 11645, 244, 1357, "Chapter",
+  Cell[856, 28, 11668, 244, 1357, "Chapter",
    CellTags->"body"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"title", 12956, 289},
- {"body", 13029, 292}
+ {"title", 12979, 289},
+ {"body", 13052, 292}
  }
 *)
 (*NotebookFileOutline
@@ -306,7 +306,7 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 273, 4, 214, "Title",
  CellTags->"title"],
-Cell[856, 28, 11645, 244, 1357, "Chapter",
+Cell[856, 28, 11668, 244, 1357, "Chapter",
  CellTags->"body"]
 }, Open  ]]
 }
