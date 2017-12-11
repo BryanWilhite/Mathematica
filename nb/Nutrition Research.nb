@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48212,        843]
-NotebookOptionsPosition[     47783,        823]
-NotebookOutlinePosition[     48132,        838]
-CellTagsIndexPosition[     48089,        835]
+NotebookDataLength[     47006,        813]
+NotebookOptionsPosition[     46616,        794]
+NotebookOutlinePosition[     46965,        809]
+CellTagsIndexPosition[     46922,        806]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,35 +22,6 @@ Notebook[{
 Cell[CellGroupData[{
 Cell["Nutrition Research", "Title",
  CellChangeTimes->{3.7213584822030087`*^9}],
-
-Cell[BoxData[
- NamespaceBox["LinguisticAssistant",
-  DynamicModuleBox[{Typeset`query$$ = "cantaloupe amount 1 cup", 
-   Typeset`boxes$$ = "None", Typeset`allassumptions$$ = {}, 
-   Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
-   Typeset`querystate$$ = {
-   "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-    1.3929292`7.595474036100306, "$TimedOut" -> 4.9012772`8.14185425896024, 
-    "Messages" -> {}}}, 
-   DynamicBox[ToBoxes[
-     AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
-      Dynamic[Typeset`query$$], 
-      Dynamic[Typeset`boxes$$], 
-      Dynamic[Typeset`allassumptions$$], 
-      Dynamic[Typeset`assumptions$$], 
-      Dynamic[Typeset`open$$], 
-      Dynamic[Typeset`querystate$$]], StandardForm],
-    ImageSizeCache->{294., {10., 26.}},
-    TrackedSymbols:>{
-     Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
-      Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
-   DynamicModuleValues:>{},
-   UndoTrackedVariables:>{Typeset`open$$}],
-  BaseStyle->{"Deploy"},
-  DeleteWithContents->True,
-  Editable->False,
-  SelectWithContents->True]], "Input",
- CellChangeTimes->{3.721361546806389*^9}],
 
 Cell[CellGroupData[{
 
@@ -839,10 +810,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 79, 1, 134, "Title"],
-Cell[662, 25, 1164, 27, 60, "Input"],
 Cell[CellGroupData[{
-Cell[1851, 56, 549, 13, 68, "Input"],
-Cell[2403, 71, 45352, 748, 676, "Output"]
+Cell[684, 27, 549, 13, 68, "Input"],
+Cell[1236, 42, 45352, 748, 676, "Output"]
 }, Open  ]]
 }, Open  ]]
 }

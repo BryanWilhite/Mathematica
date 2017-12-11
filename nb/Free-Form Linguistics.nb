@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4930,        160]
-NotebookOptionsPosition[      4258,        132]
-NotebookOutlinePosition[      4634,        148]
-CellTagsIndexPosition[      4591,        145]
+NotebookDataLength[      4905,        159]
+NotebookOptionsPosition[      4235,        131]
+NotebookOutlinePosition[      4609,        147]
+CellTagsIndexPosition[      4566,        144]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,8 +69,7 @@ Cell[BoxData[
    "\"Entity[\\\"City\\\", {\\\"LosAngeles\\\", \\\"California\\\", \
 \\\"UnitedStates\\\"}]\"","\"city\""},
   "Entity"]], "Input",
- CellChangeTimes->{3.721873945831787*^9, 3.721874031546297*^9, 
-  3.7218740977335253`*^9}],
+ CellChangeTimes->{3.7219607900190334`*^9}],
 
 Cell[TextData[{
  "It is of interest to compare this WolframAlpha experience to the use of ",
@@ -100,7 +99,7 @@ Cell[BoxData[
 \\\"UnitedStates\\\"}]\"","\"city\""},
   "Entity"]], "Output",
  CellChangeTimes->{{3.7218742711839685`*^9, 3.721874286709347*^9}, 
-   3.7218744716956744`*^9, 3.7218746073883085`*^9}]
+   3.7218744716956744`*^9, 3.7218746073883085`*^9, 3.7219595948905907`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -132,7 +131,7 @@ Cell[BoxData[
 },
 WindowToolbars->"EditBar",
 WindowSize->{1260, 898},
-WindowMargins->{{174, Automatic}, {Automatic, 23}},
+WindowMargins->{{95, Automatic}, {7, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -150,16 +149,16 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 169, 3, 214, "Title"],
 Cell[752, 27, 1156, 32, 74, "Text"],
-Cell[1911, 61, 466, 11, 68, "Input"],
-Cell[2380, 74, 263, 6, 74, "Text"],
+Cell[1911, 61, 419, 10, 68, "Input"],
+Cell[2333, 73, 263, 6, 74, "Text"],
 Cell[CellGroupData[{
-Cell[2668, 84, 273, 5, 45, "Input"],
-Cell[2944, 91, 496, 11, 61, "Output"]
+Cell[2621, 83, 273, 5, 45, "Input"],
+Cell[2897, 90, 520, 11, 61, "Output"]
 }, Open  ]],
-Cell[3455, 105, 194, 4, 45, "Text"],
+Cell[3432, 104, 194, 4, 45, "Text"],
 Cell[CellGroupData[{
-Cell[3674, 113, 295, 7, 45, "Input"],
-Cell[3972, 122, 258, 6, 45, "Output"]
+Cell[3651, 112, 295, 7, 45, "Input"],
+Cell[3949, 121, 258, 6, 45, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
