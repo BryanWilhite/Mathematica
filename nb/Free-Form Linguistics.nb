@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4905,        159]
-NotebookOptionsPosition[      4235,        131]
-NotebookOutlinePosition[      4609,        147]
-CellTagsIndexPosition[      4566,        144]
+NotebookDataLength[     32569,        705]
+NotebookOptionsPosition[     31665,        669]
+NotebookOutlinePosition[     32039,        685]
+CellTagsIndexPosition[     31996,        682]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,6 +126,544 @@ Cell[BoxData[
     RowBox[{"\<\"Los Angeles\"\>", ",", "\<\"California\"\>", 
      ",", "\<\"United States\"\>"}], "}"}]}], "]"}]], "Output",
  CellChangeTimes->{3.7218749880033293`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   TemplateBox[{"\"Los Angeles\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"\"LosAngeles\"", ",", "\"California\"", ",", 
+             "\"UnitedStates\""}], "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"LosAngeles\\\", \\\"California\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+    "Entity"], ",", "\"\<Properties\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7227405690432525`*^9, 3.7227405796433215`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"administrative region\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AdministrativeDivision\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AdministrativeDivision\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"number of aggravated assaults\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggravatedAssault\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggravatedAssault\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"rate of aggravated assault\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggravatedAssaultRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggravatedAssaultRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"aggregate home value\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHomeValue\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHomeValue\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"aggregate home value, householder 15 to 24 years\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHomeValue15To24\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHomeValue15To24\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"aggregate home value, householder 25 to 34 years\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHomeValue25To34\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHomeValue25To34\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"aggregate home value, householder 35 to 64 years\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHomeValue35To64\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHomeValue35To64\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"aggregate home value, householder 65 years and over\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHomeValue65\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHomeValue65\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"aggregate household income\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AggregateHouseholdIncome\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AggregateHouseholdIncome\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"airport codes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AirportCodes\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AirportCodes\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"fuel spent in delays\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AnnualExcessFuelConsumedPerCommuter\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"AnnualExcessFuelConsumedPerCommuter\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total fuel spent in delays\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AnnualExcessFuelConsumedTotal\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \
+\\\"AnnualExcessFuelConsumedTotal\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"average annual delay\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AnnualHoursOfDelayPerAutoCommuter\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"AnnualHoursOfDelayPerAutoCommuter\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total annual delay\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AnnualHoursOfDelayTotal\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AnnualHoursOfDelayTotal\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"area\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Area\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Area\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"area code\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AreaCodes\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"AreaCodes\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"arterial street traffic\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ArterialStreetDailyVehicleMiles\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"ArterialStreetDailyVehicleMiles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"arterial street length\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ArterialStreetLaneMiles\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ArterialStreetLaneMiles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"average public transit trip distance\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"AveragePublicTransitTripLength\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \
+\\\"AveragePublicTransitTripLength\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"number of burglaries\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Burglary\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Burglary\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"rate of burglary\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"BurglaryRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"BurglaryRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"city sales tax\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"CitySalesTaxRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"CitySalesTaxRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"coordinates\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Coordinates\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Coordinates\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"country\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Country\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Country\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"county\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"County\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"County\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"county sales tax\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"CountySalesTaxRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"CountySalesTaxRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total rate of crime\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"CrimeRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"CrimeRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total number of crimes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"CrimeTotal\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"CrimeTotal\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"average daily traffic delay\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"DailyDelayMinutes\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"DailyDelayMinutes\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"elevation\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Elevation\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Elevation\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"number of rapes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ForcibleRape\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ForcibleRape\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"rate of rape\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ForcibleRapeRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ForcibleRapeRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"freeway traffic\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"FreewayDailyVehicle-Miles\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"FreewayDailyVehicle-Miles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"freeway length\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"FreewayLaneMiles\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"FreewayLaneMiles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"Gini index\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"GiniIndex\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"GiniIndex\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"has polygon?\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"HasPolygon\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"HasPolygon\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"FHFA home price index\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"HousePriceIndex\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"HousePriceIndex\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"FHFA home price index annual average\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"HousePriceIndexAnnualAverage\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"HousePriceIndexAnnualAverage\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"housing affordability index\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"HousingAffordability\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"HousingAffordability\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"households\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"HousingUnits\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"HousingUnits\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"number of larcenies\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"LarcenyTheft\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"LarcenyTheft\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"rate of larceny\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"LarcenyTheftRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"LarcenyTheftRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"latitude\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Latitude\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Latitude\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"longitude\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Longitude\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Longitude\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total magnetic field strength\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MagneticFieldStrength\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MagneticFieldStrength\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"median age\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MedianAge\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MedianAge\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"median home sale price\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MedianHomeSalePrice\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MedianHomeSalePrice\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"median home value\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MedianHomeValue\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MedianHomeValue\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"median household income\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MedianHouseholdIncome\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MedianHouseholdIncome\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"number of motor vehicle thefts\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MotorVehicleTheft\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MotorVehicleTheft\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"rate of motor vehicle thefts\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MotorVehicleTheftRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"MotorVehicleTheftRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"incidents of murder and nonnegligent manslaughter\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MurderNonnegligentManslaughter\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \
+\\\"MurderNonnegligentManslaughter\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"rate of murder and nonnegligent manslaughter\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"MurderNonnegligentManslaughterRate\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"MurderNonnegligentManslaughterRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Name\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Name\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"next daylight saving shift\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"NextDSTShift\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"NextDSTShift\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"nicknames\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Nicknames\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Nicknames\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"number of owner\[Hyphen]occupied housing units\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"NumberOfHomes\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"NumberOfHomes\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"average daily peak period travelers\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PeakPeriodTravelers\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PeakPeriodTravelers\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"peak period travelers per capita\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PeakPeriodTravelersPerCapita\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PeakPeriodTravelersPerCapita\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"average daily peak period vehicles\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PeakPeriodVehicles\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PeakPeriodVehicles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable people born in city\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PeopleBornInCity\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PeopleBornInCity\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable people who died in city\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PeopleDiedInCity\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PeopleDiedInCity\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"per capita income\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PerCapitaIncome\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PerCapitaIncome\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"polygon\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Polygon\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Polygon\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"city population\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Population\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Population\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by educational attainment\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationByEducationalAttainment\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"PopulationByEducationalAttainment\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by migration in previous 12 months\"",
+     RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationByGeographicalMobility\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"PopulationByGeographicalMobility\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by language spoken at home\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationByLanguageSpokenAtHome\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"PopulationByLanguageSpokenAtHome\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by marital status\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationByMaritalStatus\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PopulationByMaritalStatus\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by poverty status\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationByPovertyStatus\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PopulationByPovertyStatus\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"population by school enrollment\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationBySchoolEnrollment\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PopulationBySchoolEnrollment\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"population density\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PopulationDensity\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PopulationDensity\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"position\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Position\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Position\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"last daylight saving shift\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PreviousDSTShift\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PreviousDSTShift\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total rate of property crime\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PropertyCrimeRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PropertyCrimeRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total number of property crimes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"PropertyCrimeTotal\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"PropertyCrimeTotal\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total public transit use\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"City\"", ",", "\"PublicTransportationAnnualPassengerMiles\""}], 
+       "]"}],"\"EntityProperty[\\\"City\\\", \
+\\\"PublicTransportationAnnualPassengerMiles\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"unlinked public transit trips\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{
+        "\"City\"", ",", 
+         "\"PublicTransportationAnnualUnlinkedPassengerTrips\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \
+\\\"PublicTransportationAnnualUnlinkedPassengerTrips\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"4 bedroom apartment fair market rent\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RentFourBedrooms\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RentFourBedrooms\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"1 bedroom apartment fair market rent\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RentOneBedrooms\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RentOneBedrooms\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"3 bedroom apartment fair market rent\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RentThreeBedrooms\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RentThreeBedrooms\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"2 bedroom apartment fair market rent\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RentTwoBedrooms\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RentTwoBedrooms\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"studio apartment fair market rent\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RentZeroBedrooms\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RentZeroBedrooms\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"number of robberies\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"Robbery\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"Robbery\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"rate of robbery\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RobberyRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RobberyRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"daily rush hour length\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"RushHours\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"RushHours\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"state sales tax\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"StateSalesTaxRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"StateSalesTaxRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"time zone\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"TimeZone\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"TimeZone\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total daily traffic delay\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"TotalDailyDelay\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"TotalDailyDelay\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"total sales tax rate\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"TotalSalesTaxRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"TotalSalesTaxRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"average peak travel time\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"TravelTimeIndex\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"TravelTimeIndex\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"unemployment rate\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"UnemploymentRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"UnemploymentRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"unweighted sample housing units\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"UnweightedSampleHousingUnits\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"UnweightedSampleHousingUnits\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"unweighted sample population\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"UnweightedSamplePopulation\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"UnweightedSamplePopulation\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total rate of violent crime\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ViolentCrimeRate\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ViolentCrimeRate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"total number of violent crimes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ViolentCrimeTotal\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ViolentCrimeTotal\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"ZIP codes\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"City\"", ",", "\"ZIPCodes\""}], "]"}],
+     "\"EntityProperty[\\\"City\\\", \\\"ZIPCodes\\\"]\""},
+    "EntityProperty"]}], "}"}]], "Output",
+ CellChangeTimes->{3.7227405816426525`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   TemplateBox[{"\"Los Angeles\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"\"LosAngeles\"", ",", "\"California\"", ",", 
+             "\"UnitedStates\""}], "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"LosAngeles\\\", \\\"California\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"\"median household income\"",RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"City\"", ",", "\"MedianHouseholdIncome\""}], "]"}],
+       "\"EntityProperty[\\\"City\\\", \\\"MedianHouseholdIncome\\\"]\""},
+      "EntityProperty"], ",", 
+     TemplateBox[{
+      "\"1 bedroom apartment fair market rent\"",
+       RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"City\"", ",", "\"RentOneBedrooms\""}], "]"}],
+       "\"EntityProperty[\\\"City\\\", \\\"RentOneBedrooms\\\"]\""},
+      "EntityProperty"], ",", 
+     TemplateBox[{
+      "\"4 bedroom apartment fair market rent\"",
+       RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"City\"", ",", "\"RentFourBedrooms\""}], "]"}],
+       "\"EntityProperty[\\\"City\\\", \\\"RentFourBedrooms\\\"]\""},
+      "EntityProperty"]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.722740659615905*^9, {3.7227407049869213`*^9, 3.7227407157805815`*^9}, {
+   3.7227407572587495`*^9, 3.722740772845727*^9}, {3.722740808075227*^9, 
+   3.7227408092610154`*^9}, 3.722740879826166*^9, {3.7227409781691766`*^9, 
+   3.722740978677518*^9}, 3.7227411380940866`*^9, {3.7227412678408675`*^9, 
+   3.722741269380754*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"49497.`6.",RowBox[{
+       FormBox["\"$\"", TraditionalForm], "\[VeryThinSpace]"}],
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"year\""}],
+     "US dollars per year",FractionBox["\"USDollars\"", "\"Years\""]},
+    "QuantityPrefixUnit"], ",", 
+   TemplateBox[{"1083.`",RowBox[{
+       FormBox["\"$\"", TraditionalForm], "\[VeryThinSpace]"}],
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"month\""}],
+     "US dollars per month",FractionBox["\"USDollars\"", "\"Months\""]},
+    "QuantityPrefixUnit"], ",", 
+   TemplateBox[{"2106.`",RowBox[{
+       FormBox["\"$\"", TraditionalForm], "\[VeryThinSpace]"}],
+     RowBox[{"\"per \"", "\[InvisibleSpace]", "\"month\""}],
+     "US dollars per month",FractionBox["\"USDollars\"", "\"Months\""]},
+    "QuantityPrefixUnit"]}], "}"}]], "Output",
+ CellChangeTimes->{3.722740661815368*^9, 3.7227407185994616`*^9, 
+  3.7227407771325846`*^9, 3.722740811563553*^9, 3.7227408827891393`*^9, 
+  3.722741031644847*^9, 3.7227411403886147`*^9, 3.722741272184621*^9}]
 }, Open  ]]
 }, Open  ]]
 },
@@ -159,6 +697,14 @@ Cell[3432, 104, 194, 4, 45, "Text"],
 Cell[CellGroupData[{
 Cell[3651, 112, 295, 7, 45, "Input"],
 Cell[3949, 121, 258, 6, 45, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4244, 132, 539, 12, 68, "Input"],
+Cell[4786, 146, 24115, 457, 1312, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28938, 608, 1638, 35, 123, "Input"],
+Cell[30579, 645, 1058, 20, 92, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
