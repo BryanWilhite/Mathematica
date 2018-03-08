@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    179372,       3369]
-NotebookOptionsPosition[    178073,       3319]
-NotebookOutlinePosition[    178422,       3334]
-CellTagsIndexPosition[    178379,       3331]
+NotebookDataLength[    181684,       3429]
+NotebookOptionsPosition[    180266,       3375]
+NotebookOutlinePosition[    180615,       3390]
+CellTagsIndexPosition[    180572,       3387]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2051,7 +2051,63 @@ ContainsExactly[{}]}]\"",
  CellChangeTimes->{{3.7226634726851444`*^9, 3.722663581304113*^9}, {
    3.722663777812604*^9, 3.722663829632201*^9}, {3.722663863244622*^9, 
    3.7226638884132185`*^9}, 3.7226640105033646`*^9, {3.7226650226530676`*^9, 
-   3.7226650291654177`*^9}}]
+   3.7226650291654177`*^9}, 3.7235172366135983`*^9, 3.7235173602598886`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"spirulina", " ", "=", " ", 
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<Food\>\"", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"\<Food\>\"", ",", " ", "\"\<FoodType\>\""}], "]"}], " ", "->",
+         " ", 
+        RowBox[{"ContainsExactly", "[", 
+         RowBox[{"{", 
+          RowBox[{"Entity", "[", 
+           RowBox[{"\"\<FoodType\>\"", ",", " ", "\"\<Seaweed\>\""}], "]"}], 
+          "}"}], "]"}]}], ",", " ", 
+       RowBox[{
+        RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"\<Food\>\"", ",", " ", "\"\<AddedFoodTypes\>\""}], "]"}], 
+        " ", "->", " ", 
+        RowBox[{"ContainsExactly", "[", 
+         RowBox[{"{", "}"}], "]"}]}], ",", " ", 
+       RowBox[{
+        RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"\<Food\>\"", ",", " ", "\"\<MoistureLevel\>\""}], "]"}], 
+        " ", "->", " ", 
+        RowBox[{"Entity", "[", 
+         RowBox[{"\"\<FoodMoistureLevel\>\"", ",", " ", "\"\<Dried\>\""}], 
+         "]"}]}], ",", " ", 
+       RowBox[{
+        RowBox[{"EntityProperty", "[", 
+         RowBox[{"\"\<Food\>\"", ",", " ", "\"\<Variety\>\""}], "]"}], " ", "->",
+         " ", 
+        RowBox[{"Entity", "[", 
+         RowBox[{"\"\<FoodVariety\>\"", ",", " ", "\"\<Spirulina\>\""}], 
+         "]"}]}]}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"EntityValue", "[", 
+  RowBox[{"spirulina", ",", 
+   TemplateBox[{"\"nutrition label\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"FoodType\"", ",", "\"NutritionLabel\""}], "]"}],
+     "\"EntityProperty[\\\"FoodType\\\", \\\"NutritionLabel\\\"]\""},
+    "EntityProperty"]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.723517384292918*^9, 3.723517393657507*^9}, {
+  3.7235174747941093`*^9, 3.723517508520607*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Missing", "[", 
+  RowBox[{"\<\"IncompatibleTypes\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Food\"\>", ",", "\<\"FoodType\"\>"}], "}"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.72351751107831*^9}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2480,7 +2536,7 @@ Cell[BoxData[
    3.7213609335293045`*^9, 3.7226605552824764`*^9, 3.7226640770018563`*^9, {
    3.722664112431487*^9, 3.7226641201776576`*^9}, {3.722664171225705*^9, 
    3.722664198948199*^9}, 3.722665112480799*^9, {3.722665147614126*^9, 
-   3.722665170778576*^9}}],
+   3.722665170778576*^9}, {3.7235174444748864`*^9, 3.723517449860478*^9}}],
 
 Cell[BoxData[
  GraphicsBox[
@@ -3352,22 +3408,26 @@ Cell[58338, 1172, 18829, 348, 134, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[77204, 1525, 99, 1, 95, "Chapter"],
-Cell[77306, 1528, 28286, 525, 193, "Input"]
+Cell[77306, 1528, 28334, 525, 193, "Input"],
+Cell[CellGroupData[{
+Cell[105665, 2057, 1830, 43, 186, "Input"],
+Cell[107498, 2102, 227, 6, 78, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[105629, 2058, 94, 1, 95, "Chapter"],
-Cell[105726, 2061, 7168, 133, 75, "Input"]
+Cell[107774, 2114, 94, 1, 95, "Chapter"],
+Cell[107871, 2117, 7168, 133, 75, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[112931, 2199, 105, 1, 95, "Chapter"],
-Cell[113039, 2202, 8927, 164, 75, "Input"]
+Cell[115076, 2255, 105, 1, 95, "Chapter"],
+Cell[115184, 2258, 8927, 164, 75, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[122003, 2371, 91, 1, 95, "Chapter"],
-Cell[122097, 2374, 4752, 89, 75, "Input"],
+Cell[124148, 2427, 91, 1, 95, "Chapter"],
+Cell[124242, 2430, 4752, 89, 75, "Input"],
 Cell[CellGroupData[{
-Cell[126874, 2467, 818, 15, 68, "Input"],
-Cell[127695, 2484, 50338, 830, 772, "Output"]
+Cell[129019, 2523, 866, 15, 68, "Input"],
+Cell[129888, 2540, 50338, 830, 739, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
